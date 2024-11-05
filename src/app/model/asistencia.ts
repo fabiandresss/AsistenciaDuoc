@@ -1,6 +1,5 @@
 export class Asistencia {
 
-    ////Se usan las variables que usa el Lector QR
 
 
     public bloqueInicio: number;
@@ -15,7 +14,6 @@ export class Asistencia {
     public sede: string;
   
 
-    //// Se inicializan en el constructor
     constructor() {
       this.bloqueInicio = 0;
       this.bloqueTermino = 0;
@@ -29,9 +27,6 @@ export class Asistencia {
       this.sede = '';
     }
 
-    ///Fin constructor
-
-    ///Inicio metodos
   
     public setAsistencia(
       bloqueInicio: number,

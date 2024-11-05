@@ -1,9 +1,7 @@
-
 <app-header-anon></app-header-anon>
+
 <ion-content [fullscreen]="true">
   <div id="Fondo">
-
-
     <ion-grid>
       <ion-row>
         <ion-col>
@@ -12,56 +10,51 @@
           </div>
         </ion-col>
       </ion-row>
+
       <ion-row class="Fondoblk">
         <ion-col>
           <h1 class="SubTitulo_Color1">Registro</h1>
-          <div class="SubTitulo_Color2">Ingrese sus datos :</div>
+          <div class="SubTitulo_Color2">Porfavor, ingrese sus datos:</div>
         </ion-col>
       </ion-row>
+
       <ion-row class="Fondoblk">
         <ion-col>
-          
           <ion-list class="ion-no-padding">
             <ion-item class="ion-no-padding center">
-              <ion-label position="floating">Ingrese su correo</ion-label>
+              <ion-label position="floating">Correo</ion-label>
               <ion-input [(ngModel)]="UsuNuevo.correo" type="email" required></ion-input>
             </ion-item>
 
-
             <ion-item class="ion-no-padding center">
-              <ion-label position="floating">Ingrese su nombre</ion-label>
+              <ion-label position="floating">Nombre</ion-label>
               <ion-input [(ngModel)]="UsuNuevo.nombre" type="text" required></ion-input>
             </ion-item>
-      
+
             <ion-item class="ion-no-padding center">
-              <ion-label position="floating">Ingrese su apellido</ion-label>
+              <ion-label position="floating">Apellido</ion-label>
               <ion-input [(ngModel)]="UsuNuevo.apellido" type="text" required></ion-input>
             </ion-item>
-        
+
             <ion-item class="ion-no-padding center">
               <ion-label position="floating">Contraseña</ion-label>
               <ion-input [(ngModel)]="UsuNuevo.password" type="password" required></ion-input>
             </ion-item>
-        
-        
-        
+
             <ion-button class="ion-no-margin" expand="full" (click)="Registro()" [disabled]="!isValidForm()">Crear cuenta</ion-button>
           </ion-list>
-
-
         </ion-col>
       </ion-row>
+
       <ion-row>
         <ion-col class="center">
-          <button  class="btn-v-inicio" (click)="inicio()">Volver a Inicio</button>
+          <button class="btn-v-inicio" (click)="inicio()">Volver a Inicio</button>
         </ion-col>
       </ion-row>
     </ion-grid>
-
-   
-
   </div>
- <app-footer></app-footer>
-</ion-content>
+
+  <app-footer></app
+
 
 
