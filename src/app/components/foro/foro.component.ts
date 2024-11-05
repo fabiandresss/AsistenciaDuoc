@@ -27,7 +27,7 @@ export class ForoComponent  implements OnInit {
 
   ngOnInit() {
     this.api.listaPublicaciones.subscribe((publicaciones) => {
-      publicaciones.reverse(); // Ordenar de más nueva a mán antigua
+      publicaciones.reverse(); 
       this.publicaciones = publicaciones;
     });
     this.authService.usuarioAutenticado.subscribe(usuario => {

@@ -1,5 +1,5 @@
 export class Usuario {
-  ///Se define el modelo de usuario
+
     correo = '';
     password = '';
     nombre = '';
@@ -10,7 +10,7 @@ export class Usuario {
   
     constructor() { }
 
-    ///Sus metodos
+
   
     setUsuario(correo: string, password: string, nombre: string, apellido: string, preguntaSecreta: string, respuestaSecreta: string,  ) {
       this.correo = correo;

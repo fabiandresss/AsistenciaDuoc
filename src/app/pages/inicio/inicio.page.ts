@@ -45,7 +45,6 @@ export class InicioPage implements OnInit {
         this.componente_actual = 'qr';
       }
     });
-    ///Se valida si es que el usuario administrador esta loggeado y en caso de serlo, carga el componente admin
     this.authService.validadorAdmin().then(isAdmin => {
       this.isAdmin = isAdmin;
       if(isAdmin){

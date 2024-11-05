@@ -1,99 +1,65 @@
 <ion-content [fullscreen]="true">
   <div id="Fondo">
-
     <a #topOfPage href="#topOfPage"></a>
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-        <ion-card class="CartaFondoblk">
-
-           <ion-card class="CartaFondoblk">
+    <ion-grid>
+      
+      <ion-row>
+        <ion-col>
+          <ion-card class="CartaFondoblk">
             <ion-card-header class="CartaTitulo ion-padding">
-              Ingresa tu publicacion
+              Sube tu publicacion
             </ion-card-header>
-            
           </ion-card>
 
-          <ion-card  class="Fondoblk">
-
+          <ion-card class="Fondoblk">
             <ion-list class="ion-no-padding">
-
               <ion-item class="ion-no-padding">
                 <ion-input [(ngModel)]="publicacion.titulo" label="Título" labelPlacement="floating"></ion-input>
               </ion-item>
-          
+
               <ion-item class="ion-no-padding">
                 <ion-textarea [(ngModel)]="publicacion.contenido" label="Contenido" labelPlacement="floating"></ion-textarea>
               </ion-item>
-
             </ion-list>
-
-           
-
           </ion-card>
-      
-         
-      
+
           <div class="center ion-padding">
             <ion-button (click)="limpiarPublicacion()">Limpiar</ion-button>
             <ion-button (click)="guardarPublicacion()">Guardar</ion-button>
           </div>
-      
-        </ion-card>
-      </ion-col>
-      
+        </ion-col>
+      </ion-row>
 
-     
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <ion-card class="Subtituloforo">
-          <ion-card-title class="con-padding-top">Publicaciones recientes</ion-card-title>
-        </ion-card>
+      <ion-row>
+        <ion-col>
+          <ion-card class="Subtituloforo">
+            <ion-card-title class="con-padding-top">Publicaciones recientes</ion-card-title>
+          </ion-card>
+        </ion-col>
+      </ion-row>
 
-      </ion-col>
-    </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-card *ngFor="let pub of publicaciones">
+            <ion-card-header>
+              <h4>
+                #{{ pub.id }}: {{ pub.titulo }} <br>
+                Autor: {{ pub.nombre }} {{ pub.apellido }}
+              </h4>
+            </ion-card-header>
 
-    <ion-row>
-      <ion-col>
+            <ion-card-content>
+              {{ pub.contenido }}
+            </ion-card-content>
 
-        
-  <ion-card *ngFor="let pub of publicaciones">
+            <div class="alinear-derecha">
+              <ion-button (click)="editarPublicacion(pub)">Editar</ion-button>
+              <ion-button (click)="eliminarPublicacion(pub)">Eliminar</ion-button>
+            </div>
+          </ion-card>
+        </ion-col>
+      </ion-row>
 
-    <ion-card-header>
-      <h4>
-        #{{ pub.id }}: {{ pub.titulo }} <br>
-        Autor: {{ pub.nombre }} {{ pub.apellido }}
-      </h4>
-    </ion-card-header>
-
-    <ion-card-content>
-      {{ pub.contenido }}
-    </ion-card-content>
-
-    <div class="alinear-derecha">
-
-      <ion-button (click)="editarPublicacion(pub)">
-        Editar
-      </ion-button>
-
-      <ion-button (click)="eliminarPublicacion(pub)">
-        Eliminar
-      </ion-button>
-
-    </div>
-
-  </ion-card>
-
-
-      </ion-col>
-    </ion-row>
-
-
-  </ion-grid>
-  
-
+    </ion-grid>
   </div>
-  
-
 </ion-content>
